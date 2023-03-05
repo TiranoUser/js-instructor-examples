@@ -86,31 +86,64 @@
 
 // console.log(!1);
 // приводит в boolean и переворачивает
-const stars = 2;
-let price;
+// const stars = 2;
+// let price;
 
-switch (stars) {
-  case 1:
-    price = 20;
-    break;
+// switch (stars) {
+//   case 1:
+//     price = 20;
+//     break;
 
-  case 2:
-    price = 30;
-    break;
+//   case 2:
+//     price = 30;
+//     break;
 
-  case 3:
-    price = 50;
-    break;
+//   case 3:
+//     price = 50;
+//     break;
 
-  case 4:
-    price = 70;
-    break;
+//   case 4:
+//     price = 70;
+//     break;
 
-  case 5:
-    price = 120;
-    break;
+//   case 5:
+//     price = 120;
+//     break;
 
-  default:
-    console.log('Такого кол-ва звезд нет');
+//   default:
+//     console.log('Такого кол-ва звезд нет');
+// }
+// console.log(price);
+
+// циклы
+// for (let i = 0; i < 5; i += 1) {
+//   console.log(i);
+// }
+// const minSalary = 500;
+// const maxSalary = 5000;
+
+// const employees = 9;
+
+// let totalSalary = 0;
+
+// for (let i = 1; i <= employees; i += 1) {
+//   const salary = Math.round(
+//     Math.random() * (maxSalary - minSalary) + minSalary
+//   );
+//   console.log(`P/G работника ${i}-`, salary);
+//   totalSalary += salary;
+// }
+
+// console.log(totalSalary);
+
+const min = 4;
+const max = 13;
+let total = 0;
+
+for (let i = min; i <= max; i += 1) {
+  if (i % 2 === 0) {
+    console.log(i);
+    total += i;
+  }
 }
-console.log(price);
+console.log('Обшее', total);
