@@ -136,14 +136,19 @@
 
 // console.log(totalSalary);
 
-const min = 4;
-const max = 13;
-let total = 0;
+// const min = 4;
+// const max = 13;
+// let total = 0;
 
-for (let i = min; i <= max; i += 1) {
-  if (i % 2 === 0) {
-    console.log(i);
-    total += i;
-  }
-}
-console.log('Обшее', total);
+// for (let i = min; i <= max; i += 1) {
+//   if (i % 2 === 0) {
+//     console.log(i);
+//     total += i;
+//   }
+// }
+// console.log('Обшее', total);
+const name = 'Mango';
+console.log(name.split('')); // ["M", "a", "n", "g", "o"]
+
+const message = 'JavaScript это интересно';
+console.log(message.split(' ')); // ["JavaScript", "это", "интересно"]
