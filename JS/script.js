@@ -147,8 +147,27 @@
 //   }
 // }
 // console.log('Обшее', total);
-const name = 'Mango';
-console.log(name.split('')); // ["M", "a", "n", "g", "o"]
+// const name = 'Mango';
+// console.log(name.split('')); // ["M", "a", "n", "g", "o"]
 
-const message = 'JavaScript это интересно';
-console.log(message.split(' ')); // ["JavaScript", "это", "интересно"]
+// const message = 'JavaScript это интересно';
+// console.log(message.split(' ')); // ["JavaScript", "это", "интересно"]
+
+// function slugify(title) {
+//   // Change code below this line
+
+//   //   const slug = title.toLowerCase().join('-');
+//   let slug = title.toLowerCase().split(' ').join('-');
+//   //   slug = slug.split(' ');
+//   //   slug = slug.join('-');
+
+//   return slug;
+//   // Change code above this line
+// }
+
+const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// Change code below this line
+const firstTwoEls = fruits.slice(0, 1);
+const nonExtremeEls = fruits.slice(1, fruits.length - 2);
+const lastThreeEls = fruits.slice(-3);
