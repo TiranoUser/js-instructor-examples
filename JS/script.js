@@ -165,9 +165,87 @@
 //   // Change code above this line
 // }
 
-const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
 
-// Change code below this line
-const firstTwoEls = fruits.slice(0, 1);
-const nonExtremeEls = fruits.slice(1, fruits.length - 2);
-const lastThreeEls = fruits.slice(-3);
+// // Change code below this line
+// const firstTwoEls = fruits.slice(0, 1);
+// const nonExtremeEls = fruits.slice(1, fruits.length - 2);
+// const lastThreeEls = fruits.slice(-3);
+
+// ## Example 2 - Меньшее из чисел
+
+// Напиши функцию `min(a,b)`, которая возвращает меньшее из чисел `a` и `b`.
+
+// function min(a, b) {
+//   return Math.min(a, b);
+// }
+
+// console.log(min(2, 5)); // 2
+// console.log(min(3, -1)); // -1
+// console.log(min(1, 1)); // 1
+// ## Example 7 - Среднее значение
+
+// Напишите функцию `calAverage()` которая принимает произвольное кол-во аргументов
+// и возвращает их среднее значение. Все аругменты будут только числами.
+// function calAverage() {
+//   console.log(arguments);
+//   let sum = 0;
+//   for (const num of arguments) {
+//     sum += num;
+//   }
+
+//   return sum / arguments.length;
+// }
+
+// console.log(calAverage(1, 2, 3, 4)); // 2.5
+// console.log(calAverage(14, 8, 2)); // 8
+// console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
+
+// ## Example 9 - Коллекция курсов (includes, indexOf, push и т. д.)
+
+// Напишите функции для работы с коллекцией обучающих курсов `courses`:
+
+// - `addCourse(name)` - добавляет курс в конец коллекции
+// - `removeCourse(name)` - удаляет курс из коллекции
+// - `updateCourse(oldName, newName)` - изменяет имя на новое
+
+// ```js
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+
+// function addCourse(name) {
+//   if (courses.includes(name)) {
+//     console.log('У вас уже есть такой курс');
+//     return;
+//   }
+//   courses.push(name);
+// }
+
+// addCourse('Express');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+// addCourse('CSS'); // 'У вас уже есть такой курс'
+
+// function removeCourse(name) {
+//   if (courses.indexOf(name) === -1) {
+//     console.log('Курс с таким имененем не найден');
+//   } else courses.splice(courses.indexOf(name), 1);
+// }
+
+// removeCourse('React');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// removeCourse('Vue'); // 'Курс с таким имененем не найден'
+
+// function updateCourse(oldName, newName) {
+//   if (courses.indexOf(oldName) === -1) {
+//     console.log('Курс с таким имененем не найден');
+//   } else courses[courses.indexOf(oldName)] = newName;
+// }
+
+// updateCourse('Express', 'NestJS');
+// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+// const firstArray = ['Mercury', 'Venus', 'Earth'];
+// const secondArray = ['Mars', 'Jupiter'];
+// const thirdArray = ['Saturn', 'Uranus', 'Neptune'];
+// const allPlanets = firstArray.concat(secondArray, thirdArray);
+
+// console.log(firstArray); // ['Mercury', 'Venus', 'Earth'];
+// console.log(allPlanets); // ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
