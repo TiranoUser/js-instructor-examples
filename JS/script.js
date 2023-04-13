@@ -1,251 +1,212 @@
-//3. Напишіть цикл, який виведе в консоль усі парні числа від max до min включно по зменшенню
+//Виводимо кнопку з текстом "Змінити" і два інпути, при натисканні на кнопку інпути
+//змінюються своїм введеним текстом
+{
+  /* <input type="text" id="js-input1" value="!!!!!!!!!!!!">
+<input type="text" id="js-input2" value="????????????">
+<button type="button" class="btn">Змінити</button> */
+}
 
-// const max = 50;
-// const min = 23;
+// const btnEl = document.querySelector('.btn');
+// const inputEl = document.querySelectorAll('input');
 
-// for (let i = min; i <= max; i++) {
-//   if (i % 2 === 0) {
-//     console.log(i);
+// const onBtnClick = evt => {
+//   // const firstValue = inputEl[0].value;
+//   // const secondValue = inputEl[1].value;
+//   // inputEl[0].value = secondValue;
+//   // inputEl[1].value = firstValue;
+//   [inputEl[0].value, inputEl[1].value] = [inputEl[1].value, inputEl[0].value];
+// };
+
+// btnEl.addEventListener('click', onBtnClick);
+
+// 3
+
+//При натисканні на кнопку міняти фоновий колір елемента з класом .play на прозорий.
+//Примітка: використовуйте CSS-властивість opacity.
+
+{
+  /* <button class="add-btn">add</button>
+    <div class="play"></div> */
+}
+{
+  /* <style>
+  .play {
+    background: pink;
+  }
+</style> */
+}
+
+// const btnEl = document.querySelector('.add-btn');
+// const palyEl = document.querySelector('.play');
+
+// btnEl.addEventListener('click', onBtnClick);
+
+// let opacityValue = 1;
+
+// function onBtnClick() {
+//   opacityValue -= 0.1;
+//   palyEl.style.opacity = opacityValue;
+// }
+
+// 4
+
+// Напишіть інтерфейс створення списку.
+//Для кожного пункту:
+
+// Запитуйте вміст пункту користувача за допомогою prompt.
+// Створюйте елемент <li> і додайте його до <ul>.
+// Процес переривається, коли користувач натискає вводить порожній рядок.
+// Усі елементи мають створюватися динамічно.
+
+{
+  /* <ul class="list"></ul> */
+}
+
+// const ulEl = document.querySelector('.list');
+
+// function addToList() {
+//   const answer = prompt('Введите новый текст');
+//   if (answer) {
+//     const itemListRef = document.createElement('li');
+//     itemListRef.textContent = answer;
+//     ulEl.append(itemListRef);
+//     addToList();
 //   }
 // }
+// addToList();
 
-// Напишіть програму, яка запитає у користувача "Enter the number of minutes to format"
-//число (кількість хвилин) і виведе в консоль
-//рядок у форматі годин і хвилин, тобто 70 має повернути у консоль "01:10"
-//
+// 5
 
-// let userTime = Number(prompt('Enter the number of minutes to format'));
-// let hour = Math.floor(userTime / 60);
-// let minutes = userTime % 60;
-// console.log(`${hour}: ${minutes}`.padStart(5, '0'));
+/* ---------------------------------*/
+//Вивести 4 червоні квадрати,
+//при кліку на будь - який, він ставати зеленим, при цьому якщо
+//є вже зелений квадрат, то він ставати назад червоним і так можна кликати на будь-який
+//квадрат, він ставати зеленим, а старий зелений квадрат назад червоним і тд.
+//(Зробити завдання так, щоб можна було додати ще хоч 100 квадратів, при цьому скрипт не
+//треба міняти).
 
-//Створіть функцію endsWith(), яка порівнює підрядок str1 із закінченням вихідного рядка
-//str і визначає чи закінчується рядок символами підрядка.
-// const str = 'Каждый охотник желает знать';
-// const str1 = 'скрипт';
-// const str2 = 'знать';
+{
+  /* 
+  
+  .square {
+  width: 150px;
+  height: 150px;
+  background: red;
+  margin: 10px;
+}
 
-// function endsWith(str, substring) {
-//   return str.endsWith(substring);
-//   // return str.includes(str2);
+.square.green {
+  background: green;
+}
+  <div class="square"></div> 
+<div class="square"></div> 
+<div class="square"></div> 
+<div class="square"></div>  */
+}
+
+// const squaresEl = document.querySelectorAll('.square');
+
+// squaresEl.forEach(square => {
+//   square.addEventListener('click', btnClick);
+// });
+
+// function btnClick(event) {
+//   event.target.classList.toggle('green');
 // }
+// 6
+/*
 
-// console.log(endsWith(str, str1)); // false
-// console.log(endsWith(str, str2)); // true
+Кнопка "Приховати" ховає текст і замінює назву кнопки на
+"Розкрити", при повторному натисканні текст знову стає доступним
+і кнопка набуває початкового вигляду.
 
-// const shouldRen = confirm('эХотите пролдлить?');
-// console.log(shouldRen);
+  <div>
+        <input id="passwordInput" type="text">
+        <button id="passwordButton">Приховати</button>
+    </div>
 
-// let quantity = prompt('Введите колво товара');
-// quantity = Number(quantity);
-// console.log(quantity);
-// console.log(typeof quantity);
-// let elementWidth = '50px';
-// const result = Number.parseInt(elementWidth);
-// elementWidth =  ;
-// console.log(`elementWidth:${result}px`);
+*/
+// const btnEl = document.querySelector('#passwordButton');
+// const inputEl = document.querySelector('#passwordInput');
 
-// let elementHeight = '20.74px';
-// elementHeight = Number.parseFloat(elementHeight);
-// console.log('elementHeight', elementHeight);
+// btnEl.addEventListener('click', onClick);
 
-// const salary = 1300.16472;
-// console.log(salary.toFixed(2));
-
-// let quantity = '30';
-// console.log(Number('    1   '));
-
-// console.log(Math.PI);
-// const base = 2;
-// const power = 5;
-// const result = Math.pow(base, power);
-// console.log(result);
-// console.log(base ** power);
-
-// let number = prompt('Введите число:');
-// number = Number(number);
-// console.log(number);
-// let power = prompt('Введите степень:');
-// power = Number(power);
-// console.log(power);
-
-// console.log(Math.pow(number, power));
-
-// const max = 99;
-// const min = 10;
-// const result = Math.round(Math.random() * (max - min) + min);
-// console.log(result);
-// const message = '1Это строка из много символов.';
-
-// console.log(message.length);
-// && - запинается на false или возвращяет последний true
-// console.log(5 && 6 && false && 'true' && 0);
-
-// console.log(false || false || 0);
-//  || - запинается на true или возвращает последний false
-
-// console.log(!1);
-// приводит в boolean и переворачивает
-// const stars = 2;
-// let price;
-
-// switch (stars) {
-//   case 1:
-//     price = 20;
-//     break;
-
-//   case 2:
-//     price = 30;
-//     break;
-
-//   case 3:
-//     price = 50;
-//     break;
-
-//   case 4:
-//     price = 70;
-//     break;
-
-//   case 5:
-//     price = 120;
-//     break;
-
-//   default:
-//     console.log('Такого кол-ва звезд нет');
+// function onClick(even) {
+//   btnEl.textContent =
+//     btnEl.textContent === 'Приховати' ? 'Розкрити' : 'Приховати';
+//   inputEl.type = inputEl.type === 'text' ? 'password' : 'text';
 // }
-// console.log(price);
+// 8
+/*
 
-// циклы
-// for (let i = 0; i < 5; i += 1) {
-//   console.log(i);
-// }
-// const minSalary = 500;
-// const maxSalary = 5000;
+Натиснувши кнопку "Подвоювати", збільшити значення
+у кожному елементі списку у 2 рази
 
-// const employees = 9;
 
-// let totalSalary = 0;
+    <div>
+        <ul class="list">
+            <li class="listItem">1</li>
+            <li class="listItem">4</li>
+            <li class="listItem">8</li>
+            <li class="listItem">16</li>
+            <li class="listItem">20</li>
+            <li class="listItem">30</li>
+        </ul>
+        <button id="double">Удвоить</button>
+    </div>
 
-// for (let i = 1; i <= employees; i += 1) {
-//   const salary = Math.round(
-//     Math.random() * (maxSalary - minSalary) + minSalary
-//   );
-//   console.log(`P/G работника ${i}-`, salary);
-//   totalSalary += salary;
-// }
+*/
 
-// console.log(totalSalary);
+// btnEl.addEventListener('click', onClick);
 
-// const min = 4;
-// const max = 13;
-// let total = 0;
+// const listEl = document.querySelector('.list');
 
-// for (let i = min; i <= max; i += 1) {
-//   if (i % 2 === 0) {
-//     console.log(i);
-//     total += i;
-//   }
-// }
-// console.log('Обшее', total);
-// const name = 'Mango';
-// console.log(name.split('')); // ["M", "a", "n", "g", "o"]
+// const btnEl = document.querySelector('#double');
 
-// const message = 'JavaScript это интересно';
-// console.log(message.split(' ')); // ["JavaScript", "это", "интересно"]
+// const onClick = evt => {
+//   const listItems = listEl.children;
 
-// function slugify(title) {
-//   // Change code below this line
+//   // [...listItems].forEach((item) => {
+//   //   item.textContent = item.textContent * 2;
+//   // });
 
-//   //   const slug = title.toLowerCase().join('-');
-//   let slug = title.toLowerCase().split(' ').join('-');
-//   //   slug = slug.split(' ');
-//   //   slug = slug.join('-');
+//   listEl.children.__proto__.forEach = [].forEach;
+//   listItems.forEach(item => {
+//     item.textContent = item.textContent * 2;
+//   });
+// };
 
-//   return slug;
-//   // Change code above this line
-// }
+// btnEl.addEventListener('click', onClick);
+// 9
+// Коло має зникати при наведенні на нього.
+// При цьому позиція сусідніх кіл має залишатися незмінною.
 
-// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+//    <ul class="grid">
+//         <li class="gridItem">1</li>
+//         <li class="gridItem">2</li>
+//         <li class="gridItem">3</li>
+//         <li class="gridItem">4</li>
+//         <li class="gridItem">5</li>
+//         <li class="gridItem">6</li>
+//         <li class="gridItem">7</li>
+//         <li class="gridItem">8</li>
+//         <li class="gridItem">9</li>
+//     </ul>
+const listRef = document.querySelector('.grid');
 
-// // Change code below this line
-// const firstTwoEls = fruits.slice(0, 1);
-// const nonExtremeEls = fruits.slice(1, fruits.length - 2);
-// const lastThreeEls = fruits.slice(-3);
+function toHideElement(event) {
+  if (event.target.tagName !== 'LI') {
+    return;
+  }
+  event.target.style.opacity = '0';
+}
 
-// ## Example 2 - Меньшее из чисел
+function toShowElement(event) {
+  if (event.target.tagName !== 'LI') {
+    return;
+  }
+  event.target.style.opacity = '1';
+}
 
-// Напиши функцию `min(a,b)`, которая возвращает меньшее из чисел `a` и `b`.
-
-// function min(a, b) {
-//   return Math.min(a, b);
-// }
-
-// console.log(min(2, 5)); // 2
-// console.log(min(3, -1)); // -1
-// console.log(min(1, 1)); // 1
-// ## Example 7 - Среднее значение
-
-// Напишите функцию `calAverage()` которая принимает произвольное кол-во аргументов
-// и возвращает их среднее значение. Все аругменты будут только числами.
-// function calAverage() {
-//   console.log(arguments);
-//   let sum = 0;
-//   for (const num of arguments) {
-//     sum += num;
-//   }
-
-//   return sum / arguments.length;
-// }
-
-// console.log(calAverage(1, 2, 3, 4)); // 2.5
-// console.log(calAverage(14, 8, 2)); // 8
-// console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
-
-// ## Example 9 - Коллекция курсов (includes, indexOf, push и т. д.)
-
-// Напишите функции для работы с коллекцией обучающих курсов `courses`:
-
-// - `addCourse(name)` - добавляет курс в конец коллекции
-// - `removeCourse(name)` - удаляет курс из коллекции
-// - `updateCourse(oldName, newName)` - изменяет имя на новое
-
-// ```js
-// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
-
-// function addCourse(name) {
-//   if (courses.includes(name)) {
-//     console.log('У вас уже есть такой курс');
-//     return;
-//   }
-//   courses.push(name);
-// }
-
-// addCourse('Express');
-// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
-// addCourse('CSS'); // 'У вас уже есть такой курс'
-
-// function removeCourse(name) {
-//   if (courses.indexOf(name) === -1) {
-//     console.log('Курс с таким имененем не найден');
-//   } else courses.splice(courses.indexOf(name), 1);
-// }
-
-// removeCourse('React');
-// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
-// removeCourse('Vue'); // 'Курс с таким имененем не найден'
-
-// function updateCourse(oldName, newName) {
-//   if (courses.indexOf(oldName) === -1) {
-//     console.log('Курс с таким имененем не найден');
-//   } else courses[courses.indexOf(oldName)] = newName;
-// }
-
-// updateCourse('Express', 'NestJS');
-// console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
-// const firstArray = ['Mercury', 'Venus', 'Earth'];
-// const secondArray = ['Mars', 'Jupiter'];
-// const thirdArray = ['Saturn', 'Uranus', 'Neptune'];
-// const allPlanets = firstArray.concat(secondArray, thirdArray);
-
-// console.log(firstArray); // ['Mercury', 'Venus', 'Earth'];
-// console.log(allPlanets); // ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
+listRef.addEventListener('mouseover', toHideElement);
+listRef.addEventListener('mouseout', toShowElement);
